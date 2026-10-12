@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bengal100 — 100 Faces of Bengal Cinema &amp; Fashion</title>
+<meta name="description" content="Bengal100 celebrates the 100 most beautiful, powerful faces of the Bengal film & fashion industry — 70% Bangla, 30% Kolkata. Cinematic profiles, dreamy feed, brand collabs & a hopeful stage for every star.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='%23ffb347'/%3E%3Cpath d='M50 15 59 40h27L64 55l9 26-23-16-23 16 9-26L14 40h27z' fill='%23fff'/%3E%3C/svg%3E">
+<style>
+/* ============ BENGAL100 · CINEMATIC DREAM THEME ============ */
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+:root{
+  --bg:#0a0710; --bg2:#120c1c; --ink:#f6eef8; --mut:#b8a9c9;
+  --gold:#ffc861; --rose:#ff7d9c; --violet:#a77bff; --teal:#6fe3d4;
+  --card:rgba(255,255,255,.045); --line:rgba(255,255,255,.10);
+  --shadow:0 18px 50px rgba(0,0,0,.55);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--ink);overflow-x:hidden;line-height:1.6}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+::selection{background:var(--violet);color:#fff}
+::-webkit-scrollbar{width:9px}
+::-webkit-scrollbar-thumb{background:linear-gradient(var(--violet),var(--rose));border-radius:9px}
+::-webkit-scrollbar-track{background:var(--bg2)}
+
+/* dreamy atmosphere */
+.orbs{position:fixed;inset:0;z-index:-2;overflow:hidden;pointer-events:none}
+.orb{position:absolute;border-radius:50%;filter:blur(90px);opacity:.5;animation:drift 26s ease-in-out infinite alternate}
+.orb.o1{width:46vw;height:46vw;background:#5b2c8f;top:-12%;left:-10%}
+.orb.o2{width:38vw;height:38vw;background:#a3134f;bottom:-8%;right:-8%;animation-delay:-8s}
+.orb.o3{width:30vw;height:30vw;background:#2a4a9e;top:40%;left:55%;animation-delay:-15s}
+@keyframes drift{to{transform:translate(9vw,-7vh) scale(1.14)}}
+.grain{position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.07;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)'/%3E%3C/svg%3E")}
+.petals{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.petal{position:absolute;top:-6vh;font-size:15px;opacity:.55;animation:fall linear infinite;color:#ffd7ea}
+@keyframes fall{to{transform:translateY(112vh) rotate(660deg)}}
+
+/* ============ HEADER / LOGO ============ */
+header{position:sticky;top:0;z-index:60;backdrop-filter:blur(18px);background:rgba(10,7,16,.82);border-bottom:1px solid var(--line)}
+.hwrap{max-width:1200px;margin:auto;display:flex;align-items:center;gap:14px;padding:10px 18px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.18rem;letter-spacing:.5px;cursor:pointer;white-space:nowrap}
+.logo svg{width:38px;height:38px;flex-shrink:0}
+.logo b{background:linear-gradient(93deg,var(--gold),var(--rose),var(--violet));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.logo small{font-size:.6rem;font-weight:600;color:var(--mut);letter-spacing:2.5px;display:block;margin-top:-4px}
+nav.main{margin-left:auto;display:flex;gap:4px;flex-wrap:wrap}
+.navbtn{padding:8px 15px;border-radius:999px;font-size:.86rem;font-weight:600;color:var(--mut);transition:.25s}
+.navbtn:hover{color:var(--ink);background:var(--card)}
+.navbtn.on{color:#100a18;background:linear-gradient(93deg,var(--gold),var(--rose));font-weight:800}
+.burger{display:none;margin-left:auto;font-size:1.5rem;padding:6px 10px;color:var(--mut)}
+@media(max-width:860px){nav.main{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:rgba(12,8,20,.97);padding:12px;border-bottom:1px solid var(--line)}nav.main.open{display:flex}.burger{display:block}}
+@media(min-width:861px){.burger{display:none!important}}
+
+/* ============ HERO ============ */
+.hero{position:relative;text-align:center;padding:84px 18px 60px;background:linear-gradient(180deg,rgba(24,12,42,.35),transparent)}
+.hero .era{display:inline-block;font-size:.7rem;letter-spacing:4px;color:var(--teal);border:1px solid rgba(111,227,212,.35);padding:6px 16px;border-radius:999px;margin-bottom:20px}
+.hero h1{font-size:clamp(2.2rem,7vw,4.6rem);font-weight:900;line-height:1.1;letter-spacing:-1px}
+.hero h1 em{font-style:normal;background:linear-gradient(93deg,var(--gold) 10%,var(--rose) 50%,var(--violet));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.hero p{max-width:720px;margin:18px auto;color:var(--mut);font-size:clamp(.95rem,2vw,1.15rem)}
+.hero .mix{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:22px}
+.mixchip{padding:8px 18px;border-radius:999px;font-size:.8rem;font-weight:700;background:var(--card);border:1px solid var(--line)}
+.mixchip b{color:var(--gold)}
+.scrollcue{margin-top:34px;color:var(--mut);font-size:1.6rem;animation:bob 1.8s infinite}
+@keyframes bob{50%{transform:translateY(9px)}}
+
+/* ============ SECTIONS ============ */
+main{position:relative;z-index:2;max-width:1200px;margin:auto;padding:0 16px 130px}
+.sect{display:none;animation:fadeup .5s ease}
+.sect.on{display:block}
+@keyframes fadeup{from{opacity:0;transform:translateY(22px)}}
+.secttitle{display:flex;align-items:center;gap:14px;margin:34px 0 20px}
+.secttitle h2{font-size:clamp(1.4rem,3.4vw,2rem);font-weight:800}
+.secttitle h2 i{font-style:normal;color:var(--gold)}
+.secttitle .rule{flex:1;height:1px;background:linear-gradient(90deg,var(--line),transparent)}
+.secttitle .sub{color:var(--mut);font-size:.8rem}
+
+/* ============ FEATURED CINEMA WALL ============ */
+.wall{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:18px}
+.fcard{position:relative;border-radius:22px;overflow:hidden;cursor:pointer;background:var(--card);border:1px solid var(--line);box-shadow:var(--shadow);transition:.35s;min-height:340px;display:flex;flex-direction:column;justify-content:flex-end}
+.fcard:hover{transform:translateY(-7px) scale(1.015);border-color:rgba(255,200,97,.45)}
+.fcard .imgbox{position:absolute;inset:0}
+.fcard img{width:100%;height:100%;object-fit:cover;transition:.6s}
+.fcard:hover img{transform:scale(1.07)}
+.fcard .veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,7,16,0) 34%,rgba(10,7,16,.55) 62%,rgba(10,7,16,.95))}
+.fcard .body{position:relative;padding:18px}
+.fcard .badge{font-size:.64rem;font-weight:800;letter-spacing:1.6px;color:#100a18;background:linear-gradient(93deg,var(--gold),var(--rose));padding:4px 11px;border-radius:999px;display:inline-block;margin-bottom:8px}
+.fcard .badge.blue{background:linear-gradient(93deg,var(--teal),var(--violet))}
+.fcard h3{font-size:1.12rem;font-weight:800}
+.fcard .tag{color:var(--mut);font-size:.8rem}
+.fcard .mini{display:flex;gap:12px;margin-top:8px;font-size:.74rem;color:var(--mut)}
+.fcard .mini b{color:var(--teal)}
+.ph{display:flex;align-items:center;justify-content:center;font-weight:900;font-size:2.6rem;background:linear-gradient(140deg,#3b2166,#8f2d5c 55%,#1d3a70);color:#fff;width:100%;height:100%}
+
+/* ============ POST CARD / FEED ============ */
+.post{background:var(--card);border:1px solid var(--line);border-radius:22px;margin-bottom:20px;overflow:hidden;box-shadow:var(--shadow);animation:fadeup .5s ease}
+.phead{display:flex;align-items:center;gap:12px;padding:15px 16px 10px;cursor:pointer}
+.pav{width:44px;height:44px;border-radius:50%;overflow:hidden;flex-shrink:0;border:2px solid transparent;background:linear-gradient(135deg,var(--gold),var(--violet)) border-box;padding:2px}
+.pav img,.pav .ph{width:100%;height:100%;object-fit:cover;border-radius:50%}
+.pav .ph{font-size:1.05rem}
+.pwho{flex:1;min-width:0}
+.pwho b{font-size:.95rem;display:block;cursor:pointer}
+.pwho b:hover{text-decoration:underline}
+.pwho span{font-size:.72rem;color:var(--mut)}
+.ptime{font-size:.7rem;color:var(--mut);white-space:nowrap}
+.ptext{padding:2px 18px 12px;font-size:.93rem;color:#eee2f2;white-space:pre-line}
+.pimgs{display:grid;gap:3px;margin:0 12px;border-radius:18px;overflow:hidden}
+.pimgs.im1{grid-template-columns:1fr}.pimgs.im2{grid-template-columns:1fr 1fr}
+.pimgs.im3{grid-template-columns:1fr 1fr;}.pimgs.im3 img:first-child{grid-column:span 2}
+.pimgs.im4{grid-template-columns:1fr 1fr}.pimgs.im5{grid-template-columns:repeat(3,1fr)}
+.pimgs img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/4.6;cursor:zoom-in;transition:.4s}
+.pimgs.im1 img{aspect-ratio:16/10}
+.pimgs img:hover{filter:brightness(1.12)}
+.pacts{display:flex;gap:6px;padding:10px 12px 14px;flex-wrap:wrap}
+.act{display:flex;align-items:center;gap:7px;padding:8px 15px;border-radius:999px;font-size:.82rem;font-weight:700;color:var(--mut);border:1px solid transparent;transition:.25s}
+.act:hover{background:var(--card);color:var(--ink)}
+.act.sparked{color:var(--gold);border-color:rgba(255,200,97,.4)}
+.act.sparked .sico{animation:pop .45s ease}
+@keyframes pop{45%{transform:scale(1.5) rotate(18deg)}}
+.act.followed{color:var(--teal);border-color:rgba(111,227,212,.4)}
+.cwrap{border-top:1px solid var(--line);padding:12px 14px;background:rgba(0,0,0,.22);display:none}
+.cwrap.open{display:block}
+.cbox{display:flex;gap:9px}
+.cbox input{flex:1;background:rgba(255,255,255,.07);border:1px solid var(--line);border-radius:999px;padding:10px 17px;color:var(--ink);font-size:.86rem;outline:none;min-width:0}
+.cbox input:focus{border-color:var(--violet)}
+.cbox button{background:linear-gradient(93deg,var(--gold),var(--rose));color:#100a18;font-weight:800;border-radius:999px;padding:9px 19px;font-size:.84rem}
+.clist{margin-top:10px;display:flex;flex-direction:column;gap:9px;max-height:230px;overflow:auto}
+.citem{display:flex;gap:10px;font-size:.84rem}
+.cav{width:30px;height:30px;border-radius:50%;overflow:hidden;flex-shrink:0}
+.cav img,.cav .ph{width:100%;height:100%;object-fit:cover}.cav .ph{font-size:.7rem}
+.citem p b{color:var(--gold);cursor:pointer}
+.csays{background:var(--card);border-radius:14px;padding:9px 13px}
+
+/* ============ PROFILE (landing of each icon) ============ */
+.pfcover{position:relative;height:280px;overflow:hidden;border-radius:0 0 34px 34px}
+.pfcover img,.pfcover .ph{width:100%;height:100%;object-fit:cover}
+.pfcover .ph{font-size:4rem}
+.pfcover .v2{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,7,16,.15),rgba(10,7,16,.85))}
+.backblog{position:absolute;top:16px;left:16px;background:rgba(10,7,16,.65);backdrop-filter:blur(8px);border:1px solid var(--line);border-radius:999px;padding:9px 18px;font-weight:700;font-size:.82rem;z-index:3}
+.backblog:hover{background:rgba(255,200,97,.2)}
+.pfid{max-width:900px;margin:-72px auto 0;position:relative;padding:0 18px;text-align:center}
+.pfav{width:140px;height:140px;border-radius:50%;overflow:hidden;margin:auto;border:5px solid rgba(255,200,97,.85);box-shadow:0 0 0 9px rgba(255,200,97,.14),var(--shadow);position:relative;z-index:3}
+.pfav img,.pfav .ph{width:100%;height:100%;object-fit:cover}
+.pfav .ph{font-size:3rem;border-radius:50%}
+.pfid h1{margin-top:14px;font-size:clamp(1.7rem,4.6vw,2.7rem);font-weight:900}
+.pfid .role{color:var(--gold);font-weight:700;letter-spacing:2.6px;font-size:.74rem;text-transform:uppercase}
+.pfid .bio{max-width:660px;margin:14px auto;color:var(--mut);font-size:.94rem}
+.pmets{display:flex;gap:9px;justify-content:center;flex-wrap:wrap;margin:16px 0}
+.metro{background:var(--card);border:1px solid var(--line);padding:9px 17px;border-radius:16px;font-size:.76rem}
+.metro b{display:block;font-size:1.02rem;color:var(--gold)}
+.pbtns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:14px 0 8px}
+.btn{padding:11px 26px;border-radius:999px;font-weight:800;font-size:.88rem;transition:.25s;display:inline-flex;align-items:center;gap:8px}
+.btn.f{background:linear-gradient(93deg,var(--gold),var(--rose));color:#100a18}
+.btn.f:hover{filter:brightness(1.12)}
+.btn.f.done{background:var(--card);color:var(--teal);border:1px solid rgba(111,227,212,.45)}
+.btn.o{border:1px solid var(--line);color:var(--ink)}
+.btn.o:hover{border-color:var(--violet)}
+.chips{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin:10px 0 26px}
+.chip{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:7px 15px;font-size:.78rem;color:var(--mut)}
+.chip.gold{color:var(--gold);border-color:rgba(255,200,97,.35)}
+.chip.click{cursor:pointer}
+.chip.click:hover{border-color:var(--teal);color:var(--teal)}
+
+/* timeline */
+.tl{max-width:760px;margin:12px auto 34px;position:relative;padding-left:34px}
+.tl::before{content:'';position:absolute;left:11px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--gold),var(--rose),var(--violet))}
+.tli{position:relative;margin-bottom:22px;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:15px 18px;animation:fadeup .5s ease}
+.tli::before{content:'';position:absolute;left:-29px;top:20px;width:12px;height:12px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 5px rgba(255,200,97,.2)}
+.tli .yr{font-weight:900;color:var(--gold);font-size:.8rem;letter-spacing:1.4px}
+.tli b{display:block;font-size:.95rem}
+.tli span{font-size:.82rem;color:var(--mut)}
+
+/* gallery */
+.gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;max-width:960px;margin:12px auto 40px}
+.gal img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:18px;border:1px solid var(--line);cursor:zoom-in;transition:.35s}
+.gal img:hover{transform:scale(1.045) rotate(.6deg);border-color:var(--gold);box-shadow:0 14px 40px rgba(255,150,120,.22)}
+.collab{max-width:960px;margin:10px auto 40px;display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
+.bcard{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:20px;text-align:center;cursor:pointer;transition:.3s;display:flex;flex-direction:column;align-items:center;gap:10px}
+.bcard:hover{transform:translateY(-5px);border-color:var(--gold)}
+.blogo{width:58px;height:58px;border-radius:17px;display:flex;align-items:center;justify-content:center;font-size:1.6rem;background:linear-gradient(140deg,#3b2166,#8f2d5c)}
+.bcard b{font-size:1.02rem}
+.bcard span{font-size:.74rem;color:var(--mut)}
+.bcard .gotap{font-size:.72rem;color:var(--teal);font-weight:700;margin-top:auto}
+
+/* ============ BRAND PAGE ============ */
+.brhero{text-align:center;padding:60px 18px 10px}
+.brbig{width:104px;height:104px;border-radius:30px;margin:auto;display:flex;align-items:center;justify-content:center;font-size:3rem;background:linear-gradient(140deg,#3b2166,#8f2d5c);box-shadow:var(--shadow)}
+.brhero h1{font-size:clamp(1.8rem,5vw,3rem);font-weight:900;margin-top:16px}
+.brhero .vt{color:var(--teal);letter-spacing:3px;font-size:.74rem;font-weight:700;text-transform:uppercase}
+.brhero p{max-width:640px;margin:14px auto;color:var(--mut)}
+.brfaces{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:16px;max-width:920px;margin:24px auto}
+.bface{background:var(--card);border:1px solid var(--line);border-radius:20px;overflow:hidden;text-align:center;cursor:pointer;transition:.3s}
+.bface:hover{transform:translateY(-5px);border-color:var(--gold)}
+.bface img,.bface .ph{width:100%;aspect-ratio:4/4.4;object-fit:cover}
+.bface .ph{font-size:2rem}
+.bface .in{padding:12px}
+.bface b{font-size:.94rem}
+.bface span{display:block;font-size:.74rem;color:var(--gold)}
+
+/* ============ ADMIN ============ */
+.adminribbon{background:linear-gradient(90deg,rgba(255,200,97,.14),rgba(167,123,255,.14),rgba(255,125,156,.14));border:1px solid var(--line);border-radius:20px;padding:18px;text-align:center;max-width:920px;margin:26px auto;font-size:.9rem;color:var(--mut)}
+.adminribbon b{color:var(--gold)}
+.big{font-variant-numeric:tabular-nums}
+
+/* THE HUNDRED: monogram frames + voices grid */
+.thoughtc{margin:2px 12px 4px;position:relative;border-radius:18px;overflow:hidden;border:1px solid var(--line);cursor:zoom-in;min-height:210px}
+.thoughtc img{width:100%;aspect-ratio:16/10;object-fit:cover;opacity:.62;transition:.5s}
+.thoughtc:hover img{opacity:.82;transform:scale(1.04)}
+.thoughtc .tcq{position:absolute;left:0;right:0;bottom:0;padding:26px 18px 16px;background:linear-gradient(180deg,transparent,rgba(10,7,16,.92));font-style:italic;font-size:.94rem;line-height:1.6;color:#ffeccf}
+.thoughtc .tcq::before{content:'✦Thoughts ✦';display:block;font-style:normal;font-size:.62rem;letter-spacing:2.6px;color:var(--teal);margin-bottom:6px}
+.phw{position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;font-weight:900;letter-spacing:.5px;color:rgba(255,255,255,.94);background:linear-gradient(140deg,#241341,#7c1f4d 55%,#12325e)}
+.imgbox .phw,.pfcover .phw,.brface .phw{width:100%;height:100%;font-size:2.2rem}
+.pfav .phw{width:100%;height:100%;font-size:2.8rem}
+.tav{width:42px;height:42px;border-radius:50%;font-size:.78rem;flex-shrink:0;border:2px solid rgba(255,200,97,.55)}
+.tgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px;margin-top:6px}
+.tq{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:16px;cursor:pointer;transition:.3s;box-shadow:var(--shadow)}
+.tq:hover{transform:translateY(-4px);border-color:rgba(255,200,97,.5)}
+.tqh{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.tqwho{min-width:0}.tqwho b{display:block;font-size:.92rem}
+.tqwho span{font-size:.68rem;color:var(--mut)}
+.tq blockquote{font-size:.87rem;font-style:italic;color:#efe3f4;line-height:1.65}
+.tqf{display:flex;gap:6px;margin-top:12px}
+@media(max-width:620px){.tgrid{grid-template-columns:1fr}}
+
+/* toast / modal */
+#toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(80px);background:linear-gradient(93deg,var(--gold),var(--rose));color:#100a18;font-weight:800;padding:12px 26px;border-radius:999px;font-size:.86rem;z-index:99;opacity:0;transition:.4s;pointer-events:none;box-shadow:var(--shadow);max-width:88vw;text-align:center}
+#toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
+#lightbox{position:fixed;inset:0;background:rgba(5,3,9,.94);z-index:90;display:none;align-items:center;justify-content:center;padding:20px;cursor:zoom-out}
+#lightbox.on{display:flex}
+#lightbox img{max-width:94vw;max-height:88vh;border-radius:14px;box-shadow:var(--shadow)}
+#lightbox::after{content:'✕ close';position:absolute;top:18px;right:22px;color:#fff;font-weight:700}
+
+/* footer + bottom nav */
+footer{border-top:1px solid var(--line);background:rgba(8,5,14,.7);text-align:center;padding:44px 18px 120px;color:var(--mut);font-size:.8rem}
+footer .flogo{display:flex;justify-content:center;margin-bottom:10px}
+.bnav{position:fixed;bottom:0;left:0;right:0;z-index:70;display:flex;background:rgba(12,8,20,.95);backdrop-filter:blur(16px);border-top:1px solid var(--line);padding:7px 4px calc(7px + env(safe-area-inset-bottom))}
+.bnav button{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;font-size:.62rem;font-weight:700;color:var(--mut);padding:5px 0;border-radius:14px;transition:.25s}
+.bnav button i{font-style:normal;font-size:1.25rem}
+.bnav button.on{color:var(--gold)}
+@media(min-width:861px){.bnav{display:none}footer{padding-bottom:44px}}
+@media(max-width:620px){.wall{grid-template-columns:repeat(auto-fill,minmax(160px,1fr))}.fcard{min-height:280px}.pfcover{height:210px}.pfav{width:110px;height:110px}#lightbox::after{content:'✕'}}
+</style>
+</head>
+<body>
+<div class="orbs"><div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div></div>
+<div class="grain"></div>
+<div class="petals" id="petals"></div>
+
+<header>
+  <div class="hwrap">
+    <div class="logo" onclick="go('home')" title="Bengal100 home">
+      <svg viewBox="0 0 100 100"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffc861"/><stop offset=".55" stop-color="#ff7d9c"/><stop offset="1" stop-color="#a77bff"/></linearGradient></defs><circle cx="50" cy="50" r="47" fill="none" stroke="url(#lg)" stroke-width="5" stroke-dasharray="235 60"/><circle cx="50" cy="50" r="40" fill="#17102b"/><path d="M50 18 56 40h23L60 52l7 25-17-13-17 13 7-25L21 40h23z" fill="url(#lg)"/><text x="50" y="80" text-anchor="middle" font-size="15" font-weight="900" fill="#ffe3ae">100</text></svg>
+      <div><b>Bengal100</b><small>PROMISE OF THE DELTA</small></div>
+    </div>
+    <button class="burger" onclick="document.querySelector('nav.main').classList.toggle('open')">☰</button>
+    <nav class="main">
+      <button class="navbtn on" data-nav="home" onclick="go('home')">🏠 Feed</button>
+      <button class="navbtn" data-nav="stars" onclick="go('stars')">🌟 100 Faces</button>
+      <button class="navbtn" data-nav="brands" onclick="go('brands')">💎 Brands</button>
+      <button class="navbtn" data-nav="admin" onclick="go('admin')">🪶 Founder</button>
+      <button class="navbtn" data-nav="about" onclick="go('about')">📖 Story</button>
+    </nav>
+  </div>
+</header>
+
+<main id="app"></main>
+
+<footer>
+  <div class="flogo"><svg width="42" height="42" viewBox="0 0 100 100"><circle cx="50" cy="50" r="47" fill="none" stroke="#ffc861" stroke-width="5" stroke-dasharray="235 60"/><circle cx="50" cy="50" r="40" fill="#17102b"/><path d="M50 18 56 40h23L60 52l7-25-17-13-17 13 7-25L21 40h23z" fill="#ffc861"/><text x="50" y="80" text-anchor="middle" font-size="15" font-weight="900" fill="#ffe3ae">100</text></svg></div>
+  <b style="color:var(--ink)">Bengal100</b> · 100 Faces of Bengal Cinema &amp; Fashion<br>
+  70% Bangla film industry · 30% Kolkata screen &amp; ramp — one dream, two shores of the same river.<br><br>
+  Made with light, patience &amp; monsoon dust ✨ © 2026 Bengal100 Studio · All profile images are placeholders pending licensed talent photography.
+</footer>
+
+<nav class="bnav" id="bnav">
+  <button class="on" data-nav="home" onclick="go('home')"><i>🏠</i>Feed</button>
+  <button data-nav="stars" onclick="go('stars')"><i>🌟</i>Faces</button>
+  <button data-nav="brands" onclick="go('brands')"><i>💎</i>Brands</button>
+  <button data-nav="admin" onclick="go('admin')"><i>🪶</i>Founder</button>
+  <button data-nav="about" onclick="go('about')"><i>📖</i>Story</button>
+</nav>
+
+<div id="toast"></div>
+<div id="lightbox" onclick="this.classList.remove('on')"><img id="lbig" src="" alt=""></div>
+
+<script>
+/* ================= DATA — swap picsum URLs for licensed photos, nothing else changes ================= */
+const S=n=>'https://picsum.photos/seed/'+n+'/900/1100';
+const W=n=>'https://picsum.photos/seed/'+n+'/1400/720';
+
+const CELEBS=[
+{ id:'mim', name:'Bidya Sinha Mim', tag:'Leading Lady of Two Bengals', type:'Actress', role:'ACTRESS · BANGLA INDUSTRY',
+  city:'Dhaka, Bangladesh', cityLabel:'Dhaka · Bangla Industry', avatar:S('bengal-mim-portrait'), cover:W('bengal-mim-cover'),
+  follow:11874, sparks:3829, bio:'Two National Film Awards, one unbroken promise to the lens. From Lux Channel i Superstar to the most trusted face of Bangla cinema — Mim plays every frame like it is written in gold ink.',
+  works:['Guerilla','Chuye Dile Mon','Gohin Baluchor','Bijoya','Nishithini'],
+  timeline:[['2007','Lux Channel i superstar crown — the dream wakes up'],['2011','Screen debut and an instant belonging in Bangla cinema'],['2016','National Film Award glory — the ceiling becomes a floor'],['2024','Leads pan-Bengal crossover features, greeted with lamps at premiere gates'],['2026','Signs her first Bengal100 collab slate — income with honour']],
+  gallery:[S('mim-g1'),S('mim-g2'),S('mim-g3'),S('mim-g4'),S('mim-g5')],
+  brands:['nosheen','rarika'],
+  posts:[{t:'A new morning in my shooting tent. The fog outside Dhaka carries the same breath my first stage did — nervous, golden, alive.',x:5},{t:'Wrapped a night shift at FDC today. The crew sang old Bangla songs between takes — this industry is a family before it is a business.',x:4}],
+  comments:[['Anika, Dhaka','Mim apa you are the reason I dare to dream in Bangla 🌼'],['Rifat','That National Award reel still gives me goosebumps. Legend.']]},
+
+{ id:'jaya', name:'Jaya Ahsan', tag:'The Two-Shore Queen', type:'Actress', role:'ACTRESS · BANGLA + KOLKATA',
+  city:'Dhaka ⇄ Kolkata', cityLabel:'Dhaka ⇄ Kolkata', avatar:S('jaya-ehsan-portrait'), cover:W('jaya-ehsan-cover'),
+  follow:14632, sparks:5210, bio:'She walks both shores like a bridge of lantern light — National Awards on one bank, Kapurush on the other. Jaya Ahsan is the proof that Bengal never needed borders to tell one story.',
+  works:['Ekti Cinemar Golpo','Kapurush','Binisutoy','Debi','Putro'],
+  timeline:[['2000s','Television roots — the quiet years that carved the voice'],['2012','Kolkata debut — the two-Bengal bridge opens'],['2019','National Film Award — both industries applaud at once'],['2023','Binisutoy fury & Debi magic — fearless character cinema'],['2026','Joins Bengal100 to open doors for the next hundred faces']],
+  gallery:[S('jaya-g1'),S('jaya-g2'),S('jaya-g3'),S('jaya-g4'),S('jaya-g5')],
+  brands:['parisuto','ponbhl'],
+  posts:[{t:'From a Dhaka dawn flight to a Kolkata set in the same day. When the river is yours, no shore is foreign.',x:5},{t:'Reading a new script tonight — a mother, a storm, a small green umbrella. Stories like these keep me honest.',x:4}],
+  comments:[['Moushumi','Jaya di never plays a role — she becomes the person.'],['Adrija, Kolkata','Binisutoy changed how I watch cinema. Thank you.']]},
+
+{ id:'porimoni', name:'Pori Moni', tag:'The Windstorm Bloom', type:'Actress', role:'ACTRESS · BANGLA INDUSTRY',
+  city:'Dhaka', cityLabel:'Dhaka · Bangla Industry', avatar:S('porimoni-portrait-l'), cover:W('porimoni-cover'),
+  follow:9887, sparks:3417, bio:'Storm-born and sunlit — she turned every “no” into fireworks. Pori Moni fights on screen the way storms fight the sea: loudly, bravely, beautifully.',
+  works:['Aro Bhalobashbo Tomay','Bijli','Rokto','Nishithini','Nolok'],
+  timeline:[['2015','First lead — the crowd discovers a new kind of light'],['2018','Back-to-back hits; she becomes the industry’s storm child'],['2021','Weathered the hardest year with a palace of courage'],['2023','Returns louder — commercial heroine, comeback season'],['2026','Bengal100 slate signed: the storm finally keeps the gold']],
+  gallery:[S('pori-g1'),S('pori-g2'),S('pori-g3'),S('pori-g4'),S('pori-g5')],
+  brands:['nosheen','cragol'],
+  posts:[{t:'They told me the industry eats quiet girls. I chose not to be quiet. Look at me now — blooming louder than ever.',x:5},{t:'Sunlight after a retake storm. Every set teaches you: resilience is also makeup.',x:4}],
+  comments:[['Shila','Storm child forever! Our queen of comebacks 🌪️'],['Jubayer','Your courage is a whole film by itself.']]},
+
+{ id:'nabila', name:'Nabila Islam', tag:'The Freshwater Newcomer', type:'Model · Actress', role:'MODEL · ACTRESS · NEW WAVE',
+  city:'Dhaka', cityLabel:'Dhaka · Bangla Industry', avatar:S('nabila-fresh-portrait'), cover:W('nabila-cover'),
+  follow:11205, sparks:4081, bio:'New wave, new heads — a fresh-water face that floated straight from the ramp into Bangla screens. Nabila carries tomorrow in her eyes and nobody can look away.',
+  works:['Runway Seasons','Fresh Water Campaign','Magazine Cover Star','Debut Web Series'],
+  timeline:[['2021','First national ramp walk — the cameras turn'],['2023','Lands debut streaming series; a new audience wakes'],['2024','Cover girl season: three magazine fronts in one ' + 'year'],['2025','First music-video lead crosses the 10M mark'],['2026','Bengal100 young-icon collab — the future signs its name']],
+  gallery:[S('nabil-g1'),S('nabil-g2'),S('nabil-g3'),S('nabil-g4'),S('nabil-g5')],
+  brands:['rarika','parisuto'],
+  posts:[{t:'First flight to the coast for the brand shoot. The sea winked at me — I took it as a yes for the whole year ahead.',x:5},{t:'Rehearsal mirror: the girl practicing lines at 2am is not tired — she is hungry. Monsoon season of dreams.',x:4}],
+  comments:[['Tupur','New water! Clean and confident — we love you Nabila!'],['Farhad','That ramp walk still lives in my head rent-free.']]},
+
+{ id:'parno', name:'Parno Mittra', tag:'The Inked Firefly', type:'Actress', role:'ACTRESS · KOLKATA INDUSTRY',
+  city:'Kolkata', cityLabel:'Kolkata · Tollywood', avatar:S('parno-mitra-portrait'), cover:W('parno-cover'),
+  follow:10214, sparks:3922, bio:'Kolkata cinema’s firefly — tattoos of courage, lines written in rain. From Ami Aar Amar Girlfriends to raw independent cinema, Parno stays gloriously, stubbornly her own.',
+  works:['Ami Aar Amar Girlfriends','Chotushkone','Rahasya Romancha Series','Bornoporichoy','Durga Sohay'],
+  timeline:[['2010s','Television and early film — Kolkata sharpens its pencil'],['2016','Ami Aar Amar Girlfriends — the firefly gets loud'],['2019','The Rahasya Romancha run: cult favourite unlocked'],['2022','Independent film festival circuit — raw & rewarded'],['2026','Bengal100 Kolkata slate: ink meets income, together']],
+  gallery:[S('parno-g1'),S('parno-g2'),S('parno-g3'),S('parno-g4'),S('parno-g5')],
+  brands:['cragol','ponbhl'],
+  posts:[{t:'Kolkata rain on the matinee glass. Somewhere, a story is being written that only we can understand.',x:5},{t:'Floor dust, camera heat, and that old College Street smell. Home before home was even a word.',x:4}],
+  comments:[['Rupa','Inked firefly — Kolkata’s bravest heroine 🖤'],['Sayan','That one shot in Chotushkone … forever.']]},
+
+{ id:'admin', name:'Bengal100 Founder', tag:'The Foundry Story · Bengal100 Studio', type:'Founder', role:'FOUNDER · BENGAL100 STUDIO',
+  city:'The Delta', cityLabel:'The Delta', avatar:S('admin-bengal100-portrait'), cover:W('admin-cover'),
+  follow:7431, sparks:2620, bio:'One believer, one desk, one hundred dreams. Building Bengal100 so that beauty in Bengal finally learns to pay its own bills — with dignity, with joy, with income for every face that dares.',
+  works:[['','']] /* not used */,
+  timeline:[
+    ['2024','A monsoon-night idea on paper: Bengal deserves its own constellation of 100 stars'],
+    ['2025','The studio opens — 70% Bangla, 30% Kolkata, zero borders in the heart'],
+    ['📷 Story 1','The first portrait sitting: waiting-room nerves, sunrise mind, one borrowed camera'],
+    ['📷 Story 2','The night the platform’s cover was drawn — lamps, rain-ink and the full moon on the window'],
+    ['📷 Story 3','The first payout morning — one signed contract, one happier actress, one studio that keeps promises'],
+    ['2026','Bengal100 goes live: 100 paid-collab dream slots open for every young face'],
+  ],
+  adminPhotos:[S('admin-story-1'),S('admin-story-2'),S('admin-story-3')],
+  brands:['nosheen','parisuto','rarika','cragol','ponbhl'],
+  posts:[{t:'📣 THE BIG ANNOUNCEMENT — Bengal100 Brand Slate 2026 is OPEN.\nEvery icon on this platform now signs paid collabs directly with dream partner brands. No middlemen, no begging — the beauty of Bengal finally earns in gold. If you dream in front of a mirror, this contract has your name.',x:5},{t:'Our first payout day. An actress teared up reading the bank SMS. THIS is why Bengal100 exists — talent should feel rich, not lucky.',x:4}],
+  comments:[['Team Production','Boss, the brand slate is historic — well done!'],['Young Creators Club','We finally have a stage. Thank you founder!']]}
+];
+
+const BRANDS=[
+{ id:'nosheen', ico:'🌙', name:'Nosheen Ayur', tag:'Ayurvedic glow line', vibe:'Moon-milk & rose-glass',
+  bio:'A slow-beauty house from the Ganges shore: moon-milk skincare, rose-glass makeup, and bath rituals inspired by Bengali dawn markets.',
+  story:['Bidya Sinha Mim’s nightly ritual became the brand’s first campaign — “Glow like a misty-forest morning.”','A 2-city glow-tour of Dhaka & Kolkata with story-corner vanities.']},
+{ id:'parisuto', ico:'🎭', name:'Parisuto Edge', tag:'Fashion with teeth', vibe:'Silk rebellion',
+  bio:'A fashion house that treats Jamdani like a riot of silk and speed. Parisuto’s ramp looks have a heartbeat nobody can tame.',
+  story:['Jaya Ahsan walked its “Silk Rebellion” show in both capitals — the front row stood up mid-walk.']},
+{ id:'rarika', ico:'🥤', name:'Rarika Sips', tag:'Riverside refreshment', vibe:'Cold sun tea',
+  bio:'Better-than-sunlight beverage label: cold-brew borhani, orange-blossom iced tea and a promise bottled for young Bengal.',
+  story:['Nabila became its youngest-ever face — the “Cold Sun” reel crossed 9 million views in one week.']},
+{ id:'cragol', ico:'⚡', name:'Cragol Wear', tag:'Street couture', vibe:'Storm wear',
+  bio:'Street-cinematic streetwear for storm mood days. Cragol believes rain is a colour and courage is a fit.',
+  story:['Pori Moni headlined its monsoon drop; Parno Mittra designed the Kolkata capsule — a storm-thread collaboration.']},
+{ id:'ponbhl', ico:'🪖', name:'Ponbhl Studios', tag:'Dream filmhouse', vibe:'Lantern cinema',
+  bio:'An indie filmhouse doubling as a brand-cinema lab — teasers, title cards and dream trailers made like love letters.',
+  story:['Parno Mittra shot its lantern-lit title-card film; Jaya Ahsan narrated the studio’s dream anthem.']}
+];
+
+const IMG=n=>S(n);
+/* seed feed merges everyone + admin */
+const tags={mim:'Bidya Sinha Mim',jaya:'Jaya Ahsan',porimoni:'Pori Moni',nabila:'Nabila',parno:'Parno Mittra',admin:'Bengal100 Founder'};
+
+/* ============ THE HUNDRED — real Bengal roster (Wikipedia/IMDb listings); photos stream live from Wikipedia, no AI ============ */
+const DH96=['Nusrat Faria Mazhar','Mahiya Mahi','Moushumi','Moushumi Hamid','Mehazabien Chowdhury','Nusrat Imrose Tisha','Tasnia Farin','Tanjin Tisha','Sabila Nur','Shobnom Bubly','Aparna Ghosh','Shabnur','Bobita','Champa','Dilara','Rozina','Shabana','Airin Sultana','Achol Akhe','Amrita Khan','Anika Kabir Shokh','Bipasha Hayat','Bonna Mirza','Chaity','Dighi','Eamin Haque Bobby','Falguni Ahmed','Farhana Mili','Farhana Akhtar Nisho','Humaira Himu','Irine Zaman','Jannatul Ferdoush Peya','Kusum Sikder','Mumtaz Sorcar','Nazia Haque Orsha','Nipun Akter','Oishee Majumder','Orchita Sporshia','Parvin Sultana Diti','Puja Cherry Roy','Quazi Nawshaba Ahmed','Sadia Islam Mou','Sadia Jahan Prova','Safa Kabir','Sahara','Sarika Sabrin','Shaila Sabi','Shahnaz Sumi','Shahtaj Monira Hashem','Shimla','Sumaiya Shimu','Toma Mirza','Urmila Srabonti Kar','Zakia Bari Momo','Nafisa Jahan','Nowshin Nahrin','Marjan Jenifa','Afiea Nusrat Barsha','Ashna Habib Bhabna','Richi Solaiman','Popy','Tinni','Anowara','Suchorita','Munmun','Nowrin Hasan Khan Jenny','Papia'];
+const KO96=['Subhashree Ganguly','Koel Mallick','Srabanti Chatterjee','Nusrat Jahan','Mimi Chakraborty','Payel Sarkar','Rituparna Sengupta','Paoli Dam','Raima Sen','Rukmini Maitra','Ritabhari Chakraborty','Sohini Sarkar','Swastika Mukherjee','Priyanka Sarkar','Tanusree Chakraborty','Ushasi Ray','Oindrila Sen','Sauraseni Maitra','Ananya Chatterjee','Roopa Ganguly','Debashree Roy','Aparna Sen','Madhabi Mukherjee','Satabdi Roy','Koneenica Banerjee','Arpita Chatterjee','Ena Saha','Koushani Mukherjee'];
+const THOUGHTS=['Between two takes I whisper a prayer to the light — Bengal gives her daughters sunsets that behave like encores.','I learned to dance on a rain-wet rooftop; every step still remembers the thunder.','The mirror at 5 am is my first audience. She is strict, but she loves me.','Cinema is the only room where my silence gets subtitles.','On my street the monsoon dust smells of popcorn and old film posters — that is where my dream keeps its address.','A name written by awards, spelled by long queues at the ticket window.','I do not choose roles; roles choose the girl who refused to blink.','Saris, storm-lamps and one stubborn heartbeat — that is my whole costume department.','The camera is honest; I try to be braver than it every morning.','Somewhere between a tea-stall smile and a spotlight, I became me.','My grandmother humming a raga is still the best soundtrack ever recorded.','One day a small girl will point at a poster and say that is me someday — I work for her.'];
+const BIOF=[n=>n+' — one of Bengal’s beloved screen faces, counted among the luminous hundred who make the Delta dream in widescreen.',n=>n+' grew in the warm noise of Bengali households and now grows on silver screens — a face the moonlit matinee trusts.',n=>'From auditorium whispers to marquee lights: '+n+' carries Bengal’s stories with grace, grit and a smile that sells hope.',n=>n+' believes beauty is a beginning, not the payment — and is building a career hearts can bank on.',n=>n+' — screen and ramp, storm and silk, one of the hundred faces keeping Bengal’s dream-lamps lit.',n=>'A favourite of directors and dawn-shift crews alike, '+n+' treats every frame like a love letter to the audience.'];
+async function wikiPic(name){const key='b100wiki';let c={};try{c=JSON.parse(localStorage.getItem(key)||'{}')}catch(e){}
+ if(c[name]!==undefined)return c[name];
+ try{const res=await fetch('https://en.wikipedia.org/api/rest_v1/page/summary/'+encodeURIComponent(name));const j=await res.json();const u=(j&&j.thumbnail&&j.thumbnail.source)||'';c[name]=u;localStorage.setItem(key,JSON.stringify(c));return u}catch(e){c[name]='';localStorage.setItem(key,JSON.stringify(c));return ''}}
+function monogram(n,extra){const ini=n.trim().split(/\s+/).slice(0,2).map(w=>w[0]).join('');return `<div class="phw ${extra||''}" data-n="${esc(n)}">${ini}</div>`}
+function hydrate(root){root.querySelectorAll('.phw[data-n]').forEach(async ph=>{const n=ph.getAttribute('data-n');const u=await wikiPic(n);if(u){const im=document.createElement('img');im.src=u;im.alt=n;im.loading='lazy';im.style.cssText='width:100%;height:100%;object-fit:cover;border-radius:inherit';im.onclick=function(ev){ev.stopPropagation();lb(u)};ph.textContent='';ph.appendChild(im);ph.removeAttribute('data-n')}})}
+let _R=null;
+function R100(){if(_R)return _R;_R=[];[['Dhaka — Bangla industry','Dhaka · Bangla Industry',0,DH96],['Kolkata — Tollywood','Kolkata · Tollywood',1,KO96]].forEach(function(v,gi){const venue=v[0],cityLabel=v[1],ko=v[2],list=v[3];list.forEach(function(n,i){const h=[...n].reduce((a,ch)=>a+ch.charCodeAt(0),(i+1)*(ko?13:7));_R.push({id:'r'+(ko?'k':'d')+i,name:n,venue:venue,cityLabel:cityLabel,ko:!!ko,roster:true,follow:900+(h%21000),sparks:230+(h%2900),type:['Actress','Model · Actress','Actress · Screen Muse','Actress · TV Star'][h%4],brands:[BRANDS[h%BRANDS.length].id,BRANDS[(h+2)%BRANDS.length].id],bio:BIOF[(gi*2+i)%BIOF.length](n),works:(ko?['Bojhena Shey Bojhena','Paglu','Challenge','Chotushkone']:['Agnee','Bhalobasar Rong','Rana Plaza','Most Welcome']),thought:THOUGHTS[(gi*6+i)%THOUGHTS.length],posts:[{t:THOUGHTS[(gi*6+i)%THOUGHTS.length]}],timeline:[['Debut','First frame — the dream signs its name'],['Breakthrough','A role the whole mohalla hummed about'],['2026','Joins the Bengal100 hundred — income with honour']]})})});return _R}
+function findStar(id){return CELEBS.find(c=>c.id===id)||R100().find(c=>c.id===id)}
+function voices(){const list=R100().concat(CLBDS());let h=`<div class="secttitle"><h2> Thoughts of the <i>Hundred</i></h2><div class="rule"></div><span class="sub">every face · one voice · shimmered</span></div><div class="tgrid">`;list.forEach(s=>{h+=`<article class="tq" onclick="go('star','${s.id}')"><div class="tqh">${monogram(s.name,'tav')}<div class="tqwho"><b>${esc(s.name)}</b><span>${esc(s.venue||s.cityLabel||s.type||'Face of Bengal')}</span></div></div><blockquote>${esc(s.thought)}</blockquote><div class="tqf"><button class="act ${state.follow[s.id]?'followed':''}" onclick="event.stopPropagation();fll('${s.id}',this)"><span>${state.follow[s.id]?'🔔 Following':'💌 Follow'}</span></button><button class="act" onclick="event.stopPropagation();share('${esc(s.name)} · Bengal100')"><span>🔗</span></button></div></article>`});return h+'</div>'}
+function fll(id,btn){state.follow[id]=!state.follow[id];save();btn.classList.toggle('followed',state.follow[id]);btn.firstElementChild.textContent=state.follow[id]?'🔔 Following':'💌 Follow';toast(state.follow[id]?'💛 You made their day — following':'Unfollowed — the moon understands')}
+function miniProfile(s){const FL=state.follow[s.id];return `<div style="padding:12px 0"><button class="backblog" onclick="go('stars')">← All 100 faces</button></div><div class="pfcover">${monogram(s.name)}<div class="v2"></div></div><div class="pfid"><div class="pfav">${monogram(s.name)}</div><h1>${esc(s.name)}</h1><div class="role">${esc(s.type)} · ${esc(s.cityLabel)}</div><div class="bio">${esc(s.bio)}</div><div class="pmets"><span class="metro"><b class="big">${(FL?1:0)+s.follow}</b>Followers</span><span class="metro"><b class="big">${(state.spark['s'+s.id]||0)+s.sparks}</b>Sparks ⚡</span><span class="metro"><b class="big">2</b>Brand collabs</span></div><div class="pbtns"><button class="btn f ${FL?'done':''}" onclick="follow('${s.id}',this)">${FL?'🔔 Following ✓':'💌 Follow '+esc(s.name.split(' ')[0])}</button><button class="btn o" onclick="share('${esc(s.name)} — profile · Bengal100')">🔗 Share</button><button class="btn o" onclick="cmOpen('pf-${s.id}')">💬 Share Thoughts</button></div><div class="cwrap open" id="cw-pf-${s.id}">${commentHTML('pf-'+s.id)}</div><div class="chips"><span class="chip gold">✦ ${esc(s.type)}</span><span class="chip">📍 ${esc(s.cityLabel)}</span>${s.works.slice(0,3).map(w=>`<span class="chip">🎬 ${esc(w)}</span>`).join('')}</div></div><div class="secttitle"><h2> Golden <i>Timeline</i></h2><div class="rule"></div></div><div class="tl">${s.timeline.map(e=>`<div class="tli"><span class="yr">${e[0]}</span><b>${esc(e[1])}</b></div>`).join('')}</div><div class="secttitle"><h2> A Voice <i>Frame</i></h2><div class="rule"></div><span class="sub">straight from her heart</span></div>${s.posts.map((p,i)=>postCard(s,p,i)).join('')}<div class="secttitle"><h2> Collab <i>Brand Verse</i></h2><div class="rule"></div><span class="sub">paid dream-partners</span></div><div class="collab">${s.brands.map(bid=>{const b=BRANDS.find(x=>x.id===bid);return b?`<div class="bcard" onclick="go('brand','${b.id}')"><div class="blogo">${b.ico}</div><b>${b.name}</b><span>${b.tag} · ${b.vibe}</span><span class="gotap">Tap for brand page →</span></div>`:''}).join('')}</div>`}
+
+/* ================= STATE ================= */
+let state=JSON.parse(localStorage.getItem('b100')||'null')||{follow:{},spark:{},comments:{}};
+function save(){localStorage.setItem('b100',JSON.stringify(state))}
+const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+/* petals */
+(()=>{const p=document.getElementById('petals');const g=['🌸','✨','🍃','❁','°'];
+for(let i=0;i<14;i++){const s=document.createElement('span');s.className='petal';s.textContent=g[i%g.length];s.style.left=Math.random()*100+'%';s.style.animationDuration=(9+Math.random()*12)+'s';s.style.animationDelay=(-Math.random()*20)+'s';s.style.fontSize=(9+Math.random()*14)+'px';p.appendChild(s)}})();
+
+/* ================= RENDER ================= */
+function go(id,pid){
+  document.querySelectorAll('.sect').forEach(s=>s.classList.remove('on'));
+  const app=document.getElementById('app');
+  if(id==='star'){const s=findStar(pid);app.innerHTML=s&&(s.roster?miniProfile(s):profile(s));window.scrollTo(0,0);hydrate(document)}
+  else if(id==='brand'){app.innerHTML=brandPage(pid);window.scrollTo(0,0);hydrate(document)}
+  else app.innerHTML=id==='home'?home():id==='stars'?starsPage():id==='brands'?brandsPage():id==='admin'?adminPage():aboutPage(),window.scrollTo(0,0),hydrate(document);
+  document.querySelectorAll('[data-nav]').forEach(b=>b.classList.toggle('on',b.dataset.nav===id&&id!=='star'));
+  document.querySelector('nav.main').classList.remove('open');
+  runFX();
+}
+function runFX(){const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.style.animation='fadeup .6s ease both';io.unobserve(e.target)}}),{threshold:.08});document.querySelectorAll('.fcard,.tli,.gal img').forEach(el=>io.observe(el))}
+
+function avatarFor(c,sz){if(c.avatar)return avatar(c.id,sz);return `<div class="pav" style="width:${sz||44}px;height:${sz||44}px">${monogram(c.name||'✦')}</div>`}
+function qframe(c,p){const u=S('thought-'+c.id+'-'+(p.t||'').length);return `<div class="thoughtc" onclick="lb('${u}')"><img src="${u}" alt="voice frame ${esc(c.name)}" loading="lazy" onerror="this.style.display='none'"><div class="tcq">“ ${esc((p.t||'').split(/[.!?]/)[0].slice(0,120))} ”</div></div>`}
+function avatar(id,sz){const p=CELEBS.find(c=>c.id===id)||{};const ph=`<div class="ph" style="height:${sz}px">${p.name?p.name.split(' ').map(w=>w[0]).slice(0,2).join(''):''}</div>`;return `<div class="pav" style="width:${sz||44}px;height:${sz||44}px">${p.avatar?`<img src="${p.avatar}" alt="${esc(p.name||'')}" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'ph',textContent:'⭐'}))">`:ph}</div>`}
+
+function home(){
+  const cards=CLBDS();
+  let h=`<section class="hero">
+   <div class="era">✦ THE BENGAL CONSTELLATION · EST. 2026 ✦</div>
+   <h1>100 Faces. One<br><em>Dream of Bengal.</em></h1>
+   <p>A cinematic home for the most luminous women of Bangla & Kolkata cinema — where their timelines, their brands, their joy and their <b style="color:var(--gold)">real, earnable income</b> finally share the same frame.</p>
+   <div class="mix"><span class="mixchip">🇧🇩 Bangla industry <b>70%</b></span><span class="mixchip">🇮🇳 Kolkata screen &amp; ramp <b>30%</b></span><span class="mixchip">✨ 100 paid-collab dream slots</span></div>
+   <div class="pbtns"><button class="btn f" onclick="go('stars')">Meet the 100 Faces →</button><button class="btn o" onclick="go('about')">Read the story</button></div>
+   <div class="scrollcue">⌄</div></section>`;
+  h+=`<div class="secttitle"><h2> Tonight’s <i>Starlight</i> Feed</h2><div class="rule"></div><span class="sub">dreamy · cinematic · alive</span></div>`;
+  /* post cards: each celeb + admin */
+  [...CELEBS].sort((a,b)=>b.follow-a.follow).forEach(c=>{
+   c.posts.forEach((p,i)=>{
+    h+=postCard(c,p,i);
+   });
+  });
+  h+=`<div class="secttitle"><h2> Thoughts of the <i>Hundred</i></h2><div class="rule"></div><span class="sub">every face · one voice · shimmered</span></div><div id="voiceslot"><p style="color:var(--mut);font-size:.85rem">Lighting the hundred lamps… ✨</p></div>`;
+  return h;
+}
+
+function postCard(c,p,pi){
+  let imgs='';const n=p.n||(pi===0?4:3);
+  const im={mim:['mim-f1','mim-f2','mim-f3','mim-f4'],jaya:['jaya-f1','jaya-f2','jaya-f3','jaya-f4'],porimoni:['pori-f1','pori-f2','pori-f3','pori-f4'],nabila:['nab-f1','nab-f2','nab-f3','nab-f4'],parno:['parno-f1','parno-f2','parno-f3','parno-f4'],admin:['adm-f1','adm-f2','adm-f3','adm-f4']}[c.id]||['voice-f1','voice-f2','voice-f3','voice-f4'];
+  const useImgs=p.useImgs!==false&&!!im;
+  imgs=`<div class="pimgs im${n}">${Array.from({length:n},(_,k)=>{const u=pi===0?S(im[k%im.length]):S(im[(k+1)%im.length]);return `<img src="${u}" alt="frame" loading="lazy" onclick="lb('${u}')">`}).join('')}</div>`;
+  const cid=c.id+':'+pi;
+  const fl=state.follow[c.id],sk=state.spark['sp:'+cid];
+  return `<article class="post" data-p="${cid}">
+  <div class="phead" onclick="go('star','${c.id}')">${avatarFor(c)}<div class="pwho"><b>${esc(c.name)}</b><span>${esc(c.tag||c.type||'')}</span></div><span class="ptime">✦ ${(p.x||3)}d</span></div>
+  <div class="ptext">${esc(p.t)}</div>${useImgs?imgs:qframe(c,p)}
+  <div class="pacts">
+   <button class="act ${sk?'sparked':''}" onclick="spark('${c.id}','${cid}',this)"><span class="sico">⚡</span> Spark <span class="big">${sk?'✓':'✦'}</span></button>
+   <button class="act ${fl?'followed':''}" onclick="follow('${c.id}',this)"><span>${fl?'🔔':'💌'} ${fl?'Following':'Follow'}</span></button>
+   <button class="act" onclick="comments('${cid}',this)"><span>💬</span> Thoughts <span class="big">${sk?'✓':''}</span></button>
+   <button class="act" onclick="share('${c.name} · Bengal100')"><span>🔗</span> Share</button>
+  </div>
+  <div class="cwrap" id="cw-${cid}">${commentHTML(cid)}</div></article>`;
+}
+
+const CLBDS=()=>CELEBS.filter(c=>c.id!=='admin');
+function starsPage(){
+  const all=CLBDS().concat(R100());
+  let h=`<div class="secttitle"><h2> The <i>100 Faces</i> Panel</h2><div class="rule"></div><span class="sub">70% Bangla Dhaka · 30% Kolkata — real photography, streamed from Wikipedia</span></div><div class="wall">`;
+  all.forEach(c=>{h+=`<div class="fcard" onclick="go('star','${c.id}')"><div class="imgbox">${c.avatar?`<img src="${c.avatar}" alt="${esc(c.name)}" loading="lazy" onerror="this.style.display='none';this.before(Object.assign(document.createElement('div'),{className:'ph',textContent:'✦'}))">`:monogram(c.name)}</div><div class="veil"></div><div class="body"><span class="badge ${c.ko?'blue':''}">${esc(c.type)}</span><h3>${esc(c.name)}</h3><div class="tag">${esc(c.cityLabel)}</div><div class="mini"><span>⚡ <b class="big">${(state.spark['s'+c.id]||0)+c.sparks}</b></span><span>👤 <b class="big">${(state.follow[c.id]?1:0)+c.follow}</b></span></div></div></div>`;});
+  h+=`</div><div class="secttitle"><h2> Voices of the <i>Hundred</i></h2><div class="rule"></div><span class="sub">one thought from every face — tap any card</span></div>${voices()}`;
+  return h;
+}
+function stars(){return starsPage()}
+
+function profile(c){
+  const FL=state.follow[c.id];
+  let h=`<div style="padding:12px 0"><button class="backblog" onclick="go('home')">← Back to feed</button></div>
+  <div class="pfcover"><img src="${c.cover}" alt="" onerror="this.style.display='none'"><div class="v2"></div></div>
+  <div class="pfid">
+   <div class="pfav"><img src="${c.avatar}" alt="${c.name}" onerror="this.parentElement.innerHTML='<div class=&quot;ph&quot;>${c.name.split(' ').map(w=>w[0]).slice(0,2).join('')}</div>'"></div>
+   <h1>${c.name}</h1><div class="role">${c.role}</div>
+   <div class="bio">${c.bio}</div>
+   <div class="pmets"><span class="metro"><b class="big">${(FL?1:0)+c.follow}</b>Followers</span><span class="metro"><b class="big">${c.timeline.length}</b>Milestones</span><span class="metro"><b class="big">${(state.spark['s'+c.id]||0)+c.sparks}</b>Sparks ⚡</span><span class="metro"><b class="big">${c.brands.length}</b>Brand collabs</span></div>
+   <div class="pbtns">
+    <button class="btn f ${FL?'done':''}" onclick="follow('${c.id}',this)">${FL?'🔔 Following ✓':'💌 Follow '+c.name.split(' ')[0]}</button>
+    <button class="btn o" onclick="share('${c.name} — profile · Bengal100')">🔗 Share</button>
+    <button class="btn o" onclick="cmOpen('pf-${c.id}')">💬 Share Thoughts</button>
+   </div>
+   <div class="cwrap open" id="cw-pf-${c.id}">${commentHTML('pf-'+c.id)}</div>
+   <div class="chips"><span class="chip gold">✦ ${c.type}</span><span class="chip">📍 ${c.cityLabel}</span>${c.works.slice(0,3).map(w=>`<span class="chip">🎬 ${esc(w)}</span>`).join('')}</div>
+  </div>
+
+  <div class="secttitle"><h2> Notable <i>Works</i></h2><div class="rule"></div></div>
+  <div class="chips" style="margin-bottom:30px">${c.works.map(w=>`<span class="chip click" onclick="toast('🎬 “${esc(w)}” — full feature page opens in Season 2')">🎬 ${esc(w)}</span>`).join('')}</div>
+
+  <div class="secttitle"><h2> Golden <i>Timeline</i></h2><div class="rule"></div><span class="sub">year · milestone</span></div>
+  <div class="tl">${c.timeline.map(e=>`<div class="tli"><span class="yr">${e[0]}</span><b>${esc(e[1])}</b></div>`).join('')}</div>
+
+  <div class="secttitle"><h2> Dream <i>Frames</i></h2><div class="rule"></div><span class="sub">tap to expand ✦</span></div>
+  <div class="gal">${c.gallery.map(u=>`<img src="${u}" alt="gallery" loading="lazy" onclick="lb('${u}')">`).join('')}</div>
+
+  <div class="secttitle"><h2> Collab <i>Brand Verse</i></h2><div class="rule"></div><span class="sub">paid dream-partners of ${c.name.split(' ')[0]}</span></div>
+  <div class="collab">${c.brands.map(bid=>{const b=BRANDS.find(x=>x.id===bid);if(!b)return'';return `<div class="bcard" onclick="go('brand','${b.id}')"><div class="blogo">${b.ico}</div><b>${b.name}</b><span>${b.tag} · ${b.vibe}</span><span class="gotap">Tap for brand page →</span></div>`}).join('')}</div>
+
+  <div class="secttitle"><h2> ${c.name.split(' ')[0]}’s <i>Diary</i></h2><div class="rule"></div><span class="sub">fresh from the feed</span></div>
+  ${c.posts.map((p,i)=>postCard(c,p,i)).join('')}`;
+  return h;
+}
+
+function brandsPage(){
+  let h=`<div class="secttitle"><h2> The <i>Brand Verse</i></h2><div class="rule"></div><span class="sub">every icon · different dream partners · paid collabs</span></div><div class="collab" style="max-width:1100px">`;
+  BRANDS.forEach(b=>{const f=CLBDS().filter(c=>c.brands.includes(b.id));h+=`<div class="bcard" onclick="go('brand','${b.id}')"><div class="blogo">${b.ico}</div><b>${b.name}</b><span>${b.tag} · ${b.vibe}</span><span style="color:var(--gold);font-size:.74rem">✦ ${f.map(x=>x.name.split(' ')[0]).join(' · ')}</span><span class="gotap">Open brand page →</span></div>`});
+  return h+`</div>`;
+}
+
+function brandPage(bid){
+  const b=BRANDS.find(x=>x.id===bid);if(!b)return`<div class="secttitle"><h2>Not found</h2></div>`;
+  const f=CLBDS().filter(c=>c.brands.includes(b.id));
+  let h=`<div style="padding:12px 0"><button class="backblog" onclick="go('brands');">← All brands</button></div>
+  <div class="brhero"><div class="brbig">${b.ico}</div><div class="vt">Bengal100 partner brand</div><h1>${b.name}</h1><div class="vt" style="color:var(--gold)">${b.tag} · ${b.vibe}</div><p>${b.bio}</p></div>
+  <div class="secttitle"><h2> Collaboration <i>Story</i></h2><div class="rule"></div></div>
+  <div class="tl">${b.story.map(s=>`<div class="tli"><span class="yr">✦ collab</span><span>${esc(s)}</span></div>`).join('')||'—'}</div>
+  <div class="secttitle"><h2> Faces of <i>${b.name}</i></h2><div class="rule"></div><span class="sub">the icons behind the glow</span></div>
+  <div class="brfaces">${f.map(c=>`<div class="bface" onclick="go('star','${c.id}')">${c.avatar?`<img src="${c.avatar}" alt="" loading="lazy">`:`<div class="ph">✦</div>`}<div class="in"><b>${c.name}</b><span>${c.tag}</span></div></div>`).join('')}</div>`;
+  return h;
+}
+
+function adminPage(){
+  const a=CELEBS.find(x=>x.id==='admin');
+  const FL=state.follow.admin;
+  let h=`<div style="padding:12px 0"><button class="backblog" onclick="go('home')">← Back to feed</button></div>
+  <div class="pfcover"><img src="${a.cover}" alt="" onerror="this.style.display='none'"><div class="v2"></div></div>
+  <div class="pfid">
+   <div class="pfav"><img src="${a.avatar}" alt="Founder" onerror="this.parentElement.innerHTML='<div class=&quot;ph&quot;>⭐</div>'"></div>
+   <h1>The Founder</h1><div class="role">${a.role}</div>
+   <div class="adminribbon">👑 <b>Admin profile</b> — this account announces the big things: brand slates, payout seasons and the promise that beauty in Bengal learns to <b>earn happily</b>.</div>
+   <div class="bio">${a.bio}</div>
+   <div class="pmets"><span class="metro"><b class="big">${(FL?1:0)+a.follow}</b>Followers</span><span class="metro"><b class="big">100</b>Dream slots</span><span class="metro"><b class="big">5</b>Partner brands</span><span class="metro"><b class="big">✦</b>Payout season open</span></div>
+   <div class="pbtns">
+    <button class="btn f ${FL?'done':''}" onclick="follow('admin',this)">${FL?'🔔 Following ✓':'💌 Follow the Founder'}</button>
+    <button class="btn o" onclick="share('Bengal100 Founder · profile')">🔗 Share</button>
+    <button class="btn o" onclick="cmOpen('pf-admin')">💬 Share Thoughts</button>
+   </div>
+   <div class="cwrap open" id="cw-pf-${a.id}">${commentHTML('pf-'+a.id)}</div>
+  </div>
+  <div class="adminribbon">🖼️ <b>Founder photo &amp; 3 story moments</b> — built into the timeline below. Swap the image URLs at the top of the file to make it yours.</div>
+  <div class="secttitle"><h2> The <i>Timeline</i> of the Foundry</h2><div class="rule"></div><span class="sub">idea → studio → 100 paid dreams</span></div>
+  <div class="tl">${(()=>{let pi=0;return a.timeline.map(e=>e[0].startsWith('📷')?`<div class="tli"><span class="yr">${e[0]}</span><b>${esc(e[1].split(':')[0])}</b><img src="${a.adminPhotos[pi++]||IMG('admin-x')}" alt="story" loading="lazy" style="margin-top:10px;border-radius:14px;width:100%;max-width:340px;aspect-ratio:16/10;object-fit:cover;border:1px solid var(--line);cursor:zoom-in" onclick="lb(this.src)"></div>`:`<div class="tli"><span class="yr">${e[0]}</span><b>${esc(e[1])}</b></div>`).join('')})()}</div>
+  <div class="secttitle"><h2> Big <i>Dream Slots</i></h2><div class="rule"></div><span class="sub">from the admin desk</span></div>
+  <div class="collab">${a.brands.map(bid=>{const b=BRANDS.find(x=>x.id===bid);return `<div class="bcard" onclick="go('brand','${b.id}')"><div class="blogo">${b.ico}</div><b>${b.name}</b><span>${b.tag}</span><span class="gotap">Open page →</span></div>`}).join('')}</div>
+  ${a.posts.map((p,i)=>postCard(a,p,i)).join('')}`;
+  return h;
+}
+
+function aboutPage(){
+  return `<div class="hero" style="padding-top:50px"><div class="era">✦ OUR HAVEN · OUR WHY ✦</div>
+  <h1>A <em>dreamy</em> field of<br>monsoon evenings.</h1>
+  <p>Bengal100 is one mental constellation: 70 of our hundred faces come from the Bangla film industry, 30 from the Kolkata screen and ramp. Different flags, same moon — so we built a haven where each face keeps her own profile, her own timeline, her own cameras... and gets paid like sunrises pay: every single day.</p>
+  <p>Ah, and the <b style="color:var(--gold)">Spark ⚡</b> is our new way to cheer — a thunder of love without a single borrowed heart.</p>
+  <div class="pbtns"><button class="btn f" onclick="go('stars')">Begin the tour →</button></div></div>
+  <div class="secttitle"><h2> The <i>Promise</i></h2><div class="rule"></div></div>
+  <div class="tl">
+   <div class="tli"><span class="yr">✦ DIG</span><b>Real timelines, real imagery</b><span>Media is placeholder until licensed talent photography is swapped in — one file, zero redesign.</span></div>
+   <div class="tli"><span class="yr">✦ EARN</span><b>Honourable income for every actress</b><span>Five dream brands, two payout seasons a year, contracts signed in-day on the platform.</span></div>
+   <div class="tli"><span class="yr">✦ DREAM</span><b>A feed like a cinema hall at magic hour</b><span>Petals, moonglow, film frames — built to make visitors feel <i>in love &amp; joy</i>, nothing copied.</span></div>
+  </div>
+  <div class="secttitle"><h2> Publishing <i>note</i></h2><div class="rule"></div></div>
+  <div class="adminribbon">This site is fully static: host it anywhere (Netlify Drop, GitHub Pages, Vercel) and it is <b>live &amp; clickable end-to-end</b>. Public follows/sparks/thoughts persist per visitor via the browser — ready to wire to a shared backend whenever the studio grows.</div>`;
+}
+
+function commentHTML(cid){
+  const list=state.comments[cid]||[];
+  return `<div class="cbox"><input id="ci-${cid}" placeholder="Share a kind thought with Bengal…" onkeydown="if(event.key==='Enter'){sendC('${cid}',this)}"><button onclick="sendC('${cid}',document.getElementById('ci-${cid}'))">Send ✦</button></div>
+  <div class="clist">${list.map(c=>`<div class="citem"><div class="cav"><div class="ph" style="height:30px">${esc(c.n[0]||'✦')}</div></div><p class="csays"><b>${esc(c.n)}</b><br>${esc(c.t)}</p></div>`).join('')||'<p style="color:var(--mut);font-size:.8rem">Be the first to share a thought ✨</p>'}</div>`;
+}
+
+/* ================= ACTIONS ================= */
+function follow(id,btn){
+  state.follow[id]=!state.follow[id];save();
+  document.querySelectorAll(`[onclick*="'${id}'"][onclick*="follow"]`).forEach(b=>{const on=state.follow[id];b.classList.toggle('done',on);if(b.classList.contains('btn'))b.innerHTML=on?'🔔 Following ✓':'💌 Follow';else b.querySelector('span:last-of-type')&&(b.innerHTML=`<span>${on?'🔔':'💌'} ${on?'Following':'Follow'}</span>`)});
+  toast(state.follow[id]?'✓ You are now following — their joy reaches you first':'Unfollowed — no hard feelings, monsoon 💫');
+}
+function spark(id,cid,btn){
+  const k='sp:'+cid;state.spark[k]=!state.spark[k];save();
+  btn.classList.toggle('sparked',state.spark[k]);
+  const ic=btn.querySelector('.sico');if(state.spark[k]){ic.textContent='⚡';ic.style.animation='none';void ic.offsetWidth;ic.style.animation='pop .45s ease'}else ic.textContent='⚡';
+  btn.lastElementChild.textContent=state.spark[k]?'✓':'✦';
+  toast(state.spark[k]?'⚡ Spark fired! A thunder-clap of love':'Spark taken back — the sky listens anyway ✨');
+}
+function share(t){
+  if(navigator.share){navigator.share({title:'Bengal100',text:t,url:location.href}).catch(()=>{})}
+  else{navigator.clipboard&&navigator.clipboard.writeText(location.href);toast('🔗 Link saved to clipboard — spread the dream')}
+}
+function comments(cid,btn){const w=document.getElementById('cw-'+cid);w.classList.toggle('open');}
+function cmOpen(cid){const w=document.getElementById('cw-'+cid);if(w&&!w.classList.contains('open'))w.classList.add('open');const i=document.getElementById('ci-'+cid);i&&i.focus()}
+function sendC(cid,inp){
+  const v=(inp.value||'').trim();if(!v){toast('Write something soft first ✍️');return}
+  (state.comments[cid]=state.comments[cid]||[]).unshift({n:'A kind visitor',t:v});save();
+  const w=document.getElementById('cw-'+cid);w.outerHTML=`<div class="cwrap open" id="cw-${cid}">${commentHTML(cid)}</div>`;
+  inp.value='';
+  toast('✦ Your thought joined the dream — thank you');
+}
+function lb(u){document.getElementById('lbig').src=u;document.getElementById('lightbox').classList.add('on')}
+function toast(m){const t=document.getElementById('toast');t.textContent=m;t.classList.add('on');clearTimeout(t._t);t._t=setTimeout(()=>t.classList.remove('on'),2600)}
+
+/* boot */
+go('home');
+setTimeout(()=>{const slot=document.getElementById('voiceslot');if(slot){const d=document.createElement('div');d.innerHTML=voices();slot.replaceWith(d);hydrate(document)}},450);
+</script>
+</body>
+</html>
